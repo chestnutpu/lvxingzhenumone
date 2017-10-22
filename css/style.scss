@@ -1,0 +1,310 @@
+@important "style";
+
+@function fs($val){//自定义函数fs
+	@return $val+ px;
+}
+$imgPath:"../img/";
+@mixin bg($url){
+	background:url($imgPath+$url) no-repeat 0 0;
+	}
+@mixin wh($w,$h){
+	width:$w+ px;
+	height:$h+ px;}
+@mixin pic($w,$h){
+	width:$w+ px;
+	height:$h+ px;
+}
+@mixin ft($f,$lh){
+	font-size:$f+ px;
+	line-height:$lh+ px;
+}
+
+body,h1,h2,h3,h4,h5,h6,div,header,nav,section,footer,ul,li,ol,dl,dt,dd,form,table,tr,td,img,a,span,a,em,i,strong,b,label,input,select,option,textarea,p{margin: 0;padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+img{border:0;}
+a{color:#666666;text-decoration: none;}
+a:hover{color:#ffffff;}
+input[type="button"],input[type="submit"],input[type="file"],button{cursor: pointer;
+-webkit-appearance:none;}
+.clearfix:before,.clearfix:after{content:" "; display: table;}
+.clearfix:after{clear:both;}
+.layer{ width:1200px; margin: 0 auto;}
+@font-face {
+    font-family: 'SceneStd-Light';
+    src: url('../fonts/SceneStd-Light.eot');
+    src: local('☺'), url('../fonts/SceneStd-Light.woff') format('woff'), url('../fonts/SceneStd-Light.ttf') format('truetype'), url('../fonts/SceneStd-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{  font-size:fs(14);/*初始的字体大小*/ font-family:"微软雅黑"; width:100%;margin:0 auto;overflow-x:hidden;}
+.header{position:relative;overflow:hidden;z-index:99;
+	.logo{width:94px;a{display:block;width:129px;height:94px;background:url(../img/index.png) no-repeat;position:absolute;top:26px;left:48px;}}
+	.header-nav{float:right;position:relative;z-index:88;margin-top:40px;
+		.navbtn-list{width:797px;overflow:hidden;height:26px;line-height:26px;padding-right:126px;background:#000;position:absolute;
+			li{
+				margin-left:43px;font-size:14px;float:left;
+			}}	
+		.navbtn{display:block;width:90px;height:26px;background:url(../img/index.png) 0 -109px no-repeat;float:right;cursor:pointer;position:relative;z-index:80}
+		.search-btn{float:right;margin-top:54px;width:23px;margin-right:-50px;height:23px;background:url(../img/index.png) 0 -142px no-repeat #fff;position:relative;z-index:99;
+			input{width:23px;height:23px;opacity:0;filter: alpha(opacity=0);} 
+		}	
+		.header-search{float:right;position:absolute;right:63px;top:54px;input{display:block;width:145px;height:23px;border:1px solid #595656;border-right:0;background:#000;color:#fff;padding:1px 3px;}}
+		}
+	
+	.header-title{width:366px;position:absolute;left:208px;
+		.header-2016{background:url(../img/index.png) 0 -188px no-repeat;height:60px;}
+		.header-words{font-size:28px;line-height:36px;font-weight:bolder;font-family:"黑体";margin-top:24px;margin-bottom:15px;color:#fff;span{display:inline-block;width:18px;}}
+		.header-describe{
+			border-top:1px solid #fff;width:359px;padding-top:11px;
+			p{font-size:18px;line-height:36px;font-family:"黑体";color:#fff;}
+
+		}
+	}
+	.mousebt{width:55px;height:55px;background:url(../img/index.png) -1px -262px no-repeat;position:absolute;bottom:0px;left:50%;margin-left:-27px;animation:move 2s infinite;}
+	@keyframes move{
+			0%{bottom:0px;}
+			50%{bottom:20px;}
+			100%{bottom:0px;}
+		}
+	}
+.links{
+	width:100%;background:#000;padding:50px 0 38px;position:relative;z-index:99;
+	.links-center{width:1200px;margin:0 auto;overflow:hidden;
+		ul{width:110%;
+			li{width:390px;height:190px;float:left;margin-right:13px;margin-bottom:15px;position:relative;overflow:hidden;
+				strong{width:100%;height:100%;position:absolute;background:#000;opacity: 0.4;filter: alpha(opacity=40);left:0;top:0;}
+				div{position:absolute;top:50%;width:100%;}
+				p{text-align:center;width:100%;color:#fff;font-size:24px;line-height:36px;height:36px;font-family:"SceneStd-Light";font-weight:normal;}
+				span{text-align:center;display:block;width:100%;color:#fff;font-size:18px;line-height:18px;height:18px;font-family:"方正兰亭大黑_GBK"}
+				i{display:block;width:96px;height:24px;background:url(../img/index.png) 0px -416px no-repeat;margin-left:145px;margin-top:20px;}
+				em{display:block;width:80px;height:80px;background:url(../img/index.png) 0px -330px no-repeat;position:absolute; top:50%;margin-top:-40px;left:50%;margin-left:-40px;}
+
+			}
+		}
+
+	}
+}
+.footer{width:100%;background:#000;position:relative;z-index:99;padding-top:11px;padding-bottom:14px;border-bottom:1px solid #333232;padding-left:18px;
+	.footer-log{width:122px;height:36px;background:url(../img/index.png) 0 -454px no-repeat;float:left;margin-right:214px;margin-bottom:5px;}
+	ul{float:left;margin-top:5px;margin-bottom:5px;
+		li{width:130px;height:32px;border-left:1px solid #565656;padding-left:15px;float:left;line-height:14px;
+		a{color:#fff}
+		a:hover{text-decoration:underline;}
+		}}
+
+	.tel{width:310px;height:32px;background:url(../img/index.png) 0 -497px no-repeat;padding-left:39px;float:left;margin-top:4px;margin-bottom:5px;
+		dt{height:14px;line-height:14px;font-size:14px;color:#fff;margin-bottom:4px;}
+		
+		dd{height:14px;line-height:14px;font-size:14px;color:#fff;span{color:#333232;margin-left:8px;margin-right:8px;}}
+	}
+	.footer-link{float:left;margin-bottom:5px;}
+	.weibo{width:36px;height:36px;background:url(../img/index.png) 0 -533px no-repeat #494949;margin-right:2px;float:left;}
+	.weixin{width:36px;height:36px;background:url(../img/index.png) 0 -569px no-repeat #494949;float:left}
+}
+.indexbg01{position:fixed;z-index:3;width:100%;}
+.indexbg02{position:fixed;z-index:2;
+		ul{overflow:hidden;
+			li{
+				position:absolute;width:100%;height:100%;overflow:hidden;
+			}}
+}
+
+@media (max-width:1210px){
+	.links .links-center{width:793px;}
+
+}
+@media (max-width:1000px){
+	.header .header-title{left:48px;}
+	.header .header-nav .navbtn-list{width:700px;}
+	.header .header-nav .navbtn-list li{margin-left:30px}
+}
+@media (max-width:900px){
+	.header .header-nav .navbtn-list{
+		width:260px;height:500px;line-height:40px;
+		background:rgba(0,0,0,0.5)
+	}
+}
+@media (max-width:830px){
+	.links .links-center{width:390px;}
+
+}
+@media (max-width:690px){
+	.footer ul li{width:113px;}
+}
+@media (max-width:470px){
+	.links{text-align:center;}
+	.header .header-title{transform:scale(0.8,0.8);top:100px;}
+}
+@media (max-width:440px){
+	.links .links-center ul li{transform:scale(0.8,0.8)}
+}
+@media (max-width:420px){
+	.header .header-title{transform:scale(0.6,0.6);left:-10px;}
+}
+@media (max-width:400px){
+	.links .links-center{width:320px;}
+	.links .links-center ul li{transform:scale(1,1);width:310px;}
+	.links .links-center ul li i{margin-left:108px;}
+}
+
+
+
+
+
+
+/* about.html */
+.about-footer{position:fixed;bottom:0;z-index:223}
+.about-list{width:1200px;margin:0 auto;padding-left:63px;overflow:hidden;position:absolute;top:50%;left:50%;margin-left:-600px;margin-top:-170px;z-index:222;
+	ul{width:110%;overflow:hidden;
+		li{padding:12px 13px 20px;background:rgba(0,0,0,0.7);margin-right:32px;float:left;color:#fff;
+			img{margin-bottom:10px;transform:scaleX(1);transition:transform 1s;}
+			h3{font-weight:normal;font-size:18px;line-height:30px;color:#fff;margin-bottom:6px;}
+			dt{font-size:36px;line-height:40px;color:#fff;font-family:"Arial";font-family:bolder;}
+			dd{font-size:18px;line-height:24px;color:#fff;font-family:"Arial"}
+			i{display:block;width:auto;height:auto;position:relative;
+				span{display:block;width:80px;height:80px;background:url(../img/index.png) -1px -330px no-repeat;position:absolute;left:50%;top:50%;margin:-40px 0 0 -40px;}}
+			
+		}
+		li:hover{
+			img{transform:scaleX(-1)}
+		}
+	}
+}
+
+.Popup{width:1200px;height:502px;background:#fff;padding:26px;position:fixed;left:50%;margin-left:-600px;top:60px;z-index:333;
+	.closebtn{width:55px;height:55px;background:url(../img/index.png) -420px -542px no-repeat #000;position:absolute;right:0;top:-55px;cursor:pointer;}
+	ul{width:450px;height:450px;position:relative;float:left;padding-left:0;
+	li{width:100%;height:100%;position:absolute;}
+	a{width:19px;height:35px;background:url(../img/index.png) -456px -604px no-repeat rgba(255,255,255,0.8);position:absolute;z-index:334;top:50%;margin-top:-17px;}
+	.rightbtn{right:0;transform:rotate(180deg)}
+	}
+	.title-nav{margin-bottom:26px;
+		h3{width:155px;height:45px;background:#e4e4e4;font-size:16px;line-height:45px;text-align:center;float:left;margin-right:2px;color:#000;font-weight:normal;cursor:pointer;}
+		h3:hover{background:#000;color:#fff;}
+		h2{height:45px;font-size:36px;line-height:45px;}
+		.title-current{background:#000;color:#fff;}
+	}
+	.scroll-pane{float:right;height:280px;width:656px;}
+	.about-artic{p{font-size:14px;color:#878787;line-height:30px;} h3{font-size:18px;line-height:30px;font-weight:normal;}}
+}
+.Popup03{width:580px;margin-left:-290px;}
+
+@media (max-width:1246px){
+
+.Popup{width:1000px;margin-left:-500px;}
+
+}
+@media (max-width:1050px){
+
+.Popup{width:900px;margin-left:-450px;}
+}
+@media (max-width:950px){
+
+.Popup{width:502px;margin-left:-251px;}
+}
+
+
+
+
+//品牌世界
+.product_navs{
+	position:absolute;top:100px;z-index:100;left:50%;margin-left:-461px;
+	li{width:71px;height:27px;float:left;margin-right:3px;
+		a{display:block;height:27px;font-size:14px;line-height:22px;color:#fff;text-align:center}
+		a:hover{color:#000;background:url(../img/brand-icon.png) no-repeat}
+		}
+	.current{ a{background:url(../img/brand-icon.png) no-repeat;color:#000;}}
+	}
+.brandlogo{width:1240px;height:340px;position:absolute;left:50%;margin-left:-620px;top:50%;margin-top:-190px;z-index:100;overflow:hidden;
+	ul{width:110%;padding:20px;box-sizing:content-box}
+	li{position:relative;width:235px;height:146px;
+		margin-right:6px;margin-bottom:6px;float:left;p{display:none;width:100%;height:34px;line-height:34px;color:#fff;padding-left:17px;background:url(../img/brand-icon.png) -87px 0 no-repeat;position:absolute;bottom:0;z-index:120}
+		img{position:absolute;width:100%;}
+
+	}
+	li:hover{z-index:110;img{width:110%;box-shadow:0 0 15px 2px #000;z-index:110;left:-5%;top:-5%}p{display:block;}}
+	
+}
+.brandlogobtn{position:absolute;z-index:333;bottom:120px;left:50%;margin-left:-36px;
+	.brandlogo-next{display:block;width:35px;height:35px;background:url(../img/brand-icon.png) 0 -41px no-repeat;float:left;margin-right:2px;}
+	.brandlogo-before{display:block;width:35px;height:35px;background:url(../img/brand-icon.png) -44px -41px no-repeat;float:left}
+}
+
+/* 弹窗 */
+.pop_adv{
+
+	height:70%;position:fixed;background:#fff;width:100%;z-index:333;top:15%;
+	.popadv_closbt{display:block;width:50px;height:50px;background:url(../img/brand-icon.png) 0 -94px no-repeat;position:absolute;top:-50px;left:80%;}
+	.layer{overflow:hidden;height:100%;}
+	.pop-left{width:299px;height:88px;margin-top:58px;background:url(../img/brand-icon.png) -87px -39px no-repeat;float:left; }
+	.pop-right{height:100%;border-left:1px solid #d5d5d5;float:left;padding-left:35px;width:901px;overflow:hidden;
+		ul{width:110%;margin-top:58px;margin-bottom:34px;}
+		li{margin-right:14px;float:left;}
+		p{font-size:14px;line-height:24px;color:#666666;}
+	}
+}
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
